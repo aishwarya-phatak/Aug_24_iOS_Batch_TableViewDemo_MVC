@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         Student(studentName: "Meghaa", studentRollNumber: 14)]
     
     var reuseIdentifierForTableViewCell = "StudentTableViewCell"
+    var reuseIdentifierForSVC = "SevcondViewController"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,13 @@ extension ViewController : UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let studentTableViewCell = self.studentTableView.dequeueReusableCell(withIdentifier: reuseIdentifierForTableViewCell, for: indexPath) as! StudentTableViewCell
+        
+        if (indexPath.row % 2 == 0){
+            studentTableViewCell.backgroundColor = .lightGray
+        } else {
+            studentTableViewCell.backgroundColor = .brown
+        }
+        
         studentTableViewCell.studentNameLabel.text = students[indexPath.row].studentName
         studentTableViewCell.studentRollNumberLabel.text = String(students[indexPath.row].studentRollNumber)
         studentTableViewCell.imageView1.image = UIImage(named: "test_image_2")
@@ -56,5 +64,12 @@ extension ViewController : UITableViewDataSource{
 extension ViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 145.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        let svc = self.storyboard?.instantiateViewController(withIdentifier: reuseIdentifierForSVC) as! SevcondViewController
+        svc.container = students[indexPath.row]
+        navigationController?.pushViewController(svc, animated: true)
     }
 }

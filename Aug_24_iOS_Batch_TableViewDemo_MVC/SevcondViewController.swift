@@ -9,21 +9,15 @@ import UIKit
 
 class SevcondViewController: UIViewController {
 
+    @IBOutlet weak var studentNameLabel: UILabel!
+    @IBOutlet weak var studentRollNumberLabel: UILabel!
+    
+    var container : Student?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.studentNameLabel.text = container?.studentName
+        self.studentRollNumberLabel.text = container?.studentRollNumber.codingKey.stringValue
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

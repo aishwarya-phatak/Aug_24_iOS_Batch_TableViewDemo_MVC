@@ -16,6 +16,7 @@
 		6805DE132CB3AA060009D8AB /* StudentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6805DE122CB3AA060009D8AB /* StudentTableViewCell.xib */; };
 		6805DE142CB3AA060009D8AB /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6805DE112CB3AA060009D8AB /* StudentTableViewCell.swift */; };
 		6805DE182CB3ACB90009D8AB /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6805DE172CB3ACB90009D8AB /* Student.swift */; };
+		6805DE1A2CB3BDA70009D8AB /* SevcondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6805DE192CB3BDA60009D8AB /* SevcondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		6805DE112CB3AA060009D8AB /* StudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
 		6805DE122CB3AA060009D8AB /* StudentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentTableViewCell.xib; sourceTree = "<group>"; };
 		6805DE172CB3ACB90009D8AB /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		6805DE192CB3BDA60009D8AB /* SevcondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevcondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				6805DE112CB3AA060009D8AB /* StudentTableViewCell.swift */,
 				6805DE122CB3AA060009D8AB /* StudentTableViewCell.xib */,
 				6805DE172CB3ACB90009D8AB /* Student.swift */,
+				6805DE192CB3BDA60009D8AB /* SevcondViewController.swift */,
 			);
 			path = Aug_24_iOS_Batch_TableViewDemo_MVC;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				6805DE022CB3A93B0009D8AB /* ViewController.swift in Sources */,
 				6805DDFE2CB3A93B0009D8AB /* AppDelegate.swift in Sources */,
 				6805DE002CB3A93B0009D8AB /* SceneDelegate.swift in Sources */,
+				6805DE1A2CB3BDA70009D8AB /* SevcondViewController.swift in Sources */,
 				6805DE182CB3ACB90009D8AB /* Student.swift in Sources */,
 				6805DE142CB3AA060009D8AB /* StudentTableViewCell.swift in Sources */,
 			);
