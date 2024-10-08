@@ -58,6 +58,23 @@ extension ViewController : UITableViewDataSource{
         studentTableViewCell.imageView1.image = UIImage(named: "test_image_2")
         return studentTableViewCell
     }
+    
+    //delete rows from table view
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            
+            self.studentTableView.beginUpdates()
+            self.studentTableView.deleteRows(at: [indexPath], with: .left)
+            self.students.remove(at: indexPath.row)
+            self.studentTableView.endUpdates()
+            
+        } else if editingStyle == .insert{
+            let studentNewObject = Student(studentName: "Komal", studentRollNumber: 18)
+            self.students.insert(studentNewObject, at: indexPath.row)
+            self.studentTableView.insertRows(at: [indexPath], with: .right)
+            
+        }
+    }
 }
 
 //MARK : Conforming ViewController class with UITableViewDelegate
@@ -72,4 +89,5 @@ extension ViewController : UITableViewDelegate{
         svc.container = students[indexPath.row]
         navigationController?.pushViewController(svc, animated: true)
     }
+    
 }
